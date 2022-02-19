@@ -9,6 +9,8 @@ class AuthPageLocators:
     LOCATOR_ALERT_EMAIL = (By.XPATH, "//div[@class='holder email']//div[@class='error']")
     LOCATOR_ALERT_PASSWORD = (By.XPATH, "//div[@class='holder password']//div[@class='error']")
     LOCATOR_GOOGLE_BUTTON = (By.XPATH, "//div[contains(@class, 'authentication')]//div[@class='button google']")
+    LOCATOR_REGISTRATION_BUTTON = (By.XPATH, "//div[contains(@class, 'authentication')]//span[@class='login clickable']")
+
 
 class AuthPage(BasePage):
 
@@ -37,3 +39,7 @@ class AuthPage(BasePage):
     def click_google_button(self):
         google_button = self.find_element(AuthPageLocators.LOCATOR_GOOGLE_BUTTON)
         google_button.click()
+
+    def click_registration_button(self):
+        registration_button = self.find_element(AuthPageLocators.LOCATOR_REGISTRATION_BUTTON)
+        registration_button.click()
